@@ -1,20 +1,20 @@
-import React from 'react'
-import Document, { Html, Head, Main, NextScript } from 'next/document'
-import { SkipNavLink } from '@reach/skip-nav'
+import { SkipNavLink } from "@reach/skip-nav";
+import Document, { Head, Html, Main, NextScript } from "next/document";
+import React from "react";
 
 class MyDocument extends Document {
-  render() {
-    return (
-      <Html lang="en">
-        <Head />
-        <body>
-          <SkipNavLink />
-          <Main />
-          <NextScript />
-        </body>
-      </Html>
-    )
-  }
+	render() {
+		return (
+			<Html lang="en">
+				<Head />
+				<body>
+					<SkipNavLink />
+					<Main />
+					<NextScript />
+				</body>
+			</Html>
+		);
+	}
 }
 
-export default MyDocument
+export default MyDocument;
