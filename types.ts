@@ -1,1 +1,1 @@
-export type SwcOptions = import("@swc/types").Options
+export type SwcOptions = import("@swc/types").Options;
