@@ -1,20 +1,20 @@
 {
-  "index": {
-    "title": "Introduction",
-    "type": "page",
-    "hidden": true,
-    "display": "hidden"
-  },
-  "docs": {
-    "title": "Docs",
-    "type": "page"
-  },
-  "playground": {
-    "title": "Playground",
-    "type": "page"
-  },
-  "blog": {
-    "title": "Blog",
-    "type": "page"
-  }
+	"index": {
+		"title": "Introduction",
+		"type": "page",
+		"hidden": true,
+		"display": "hidden"
+	},
+	"docs": {
+		"title": "Docs",
+		"type": "page"
+	},
+	"playground": {
+		"title": "Playground",
+		"type": "page"
+	},
+	"blog": {
+		"title": "Blog",
+		"type": "page"
+	}
 }

@@ -1,8 +1,8 @@
 {
-  "index": {
-    "title": "Try SWC",
-    "theme": {
-      "layout": "raw"
-    }
-  }
+	"index": {
+		"title": "Try SWC",
+		"theme": {
+			"layout": "raw"
+		}
+	}
 }
