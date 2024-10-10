@@ -1,20 +1,20 @@
 {
 	"dependencies": {
-		"@reach/skip-nav": "0.16.0",
-		"chart.js": "3.7.1",
-		"focus-visible": "5.2.0",
-		"markdown-to-jsx": "6.11.4",
-		"next": "13.0.6",
-		"nextra": "2.0.1",
-		"nextra-theme-docs": "2.0.1",
-		"react-chartjs-2": "3.3.0"
+		"@reach/skip-nav": "0.18.0",
+		"chart.js": "4.4.4",
+		"focus-visible": "5.2.1",
+		"markdown-to-jsx": "7.5.0",
+		"next": "14.2.15",
+		"nextra": "3.0.8",
+		"nextra-theme-docs": "3.0.8",
+		"react-chartjs-2": "5.2.0"
 	},
 	"devDependencies": {
-		"@swc/types": "0.1.6",
-		"@types/node": "18.11.10",
-		"autoprefixer": "10.4.2",
-		"postcss": "8.4.6",
-		"typescript-json-schema": "0.63.0"
+		"@swc/types": "0.1.12",
+		"@types/node": "22.7.5",
+		"autoprefixer": "10.4.20",
+		"postcss": "8.4.47",
+		"typescript-json-schema": "0.65.1"
 	},
 	"name": "swc-site",
 	"scripts": {
