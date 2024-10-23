@@ -5,13 +5,13 @@
 		"focus-visible": "5.2.1",
 		"markdown-to-jsx": "7.5.0",
 		"next": "15.0.0",
-		"nextra": "3.0.15",
-		"nextra-theme-docs": "3.0.15",
+		"nextra": "3.1.0",
+		"nextra-theme-docs": "3.1.0",
 		"react-chartjs-2": "5.2.0"
 	},
 	"devDependencies": {
 		"@swc/types": "0.1.12",
-		"@types/node": "22.7.7",
+		"@types/node": "22.7.9",
 		"autoprefixer": "10.4.20",
 		"postcss": "8.4.47",
 		"typescript-json-schema": "0.65.1"
