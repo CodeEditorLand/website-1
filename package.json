@@ -1,26 +1,36 @@
 {
-	"dependencies": {
-		"@reach/skip-nav": "0.18.0",
-		"chart.js": "4.4.5",
-		"focus-visible": "5.2.1",
-		"markdown-to-jsx": "7.5.0",
-		"next": "15.0.1",
-		"nextra": "3.1.0",
-		"nextra-theme-docs": "3.1.0",
-		"react-chartjs-2": "5.2.0"
-	},
-	"devDependencies": {
-		"@swc/types": "0.1.12",
-		"@types/node": "22.7.9",
-		"autoprefixer": "10.4.20",
-		"postcss": "8.4.47",
-		"typescript-json-schema": "0.65.1"
-	},
-	"name": "swc-site",
-	"scripts": {
-		"build": "pnpm run generate && next build",
-		"dev": "next",
-		"generate": "typescript-json-schema tsconfig.json 'SwcOptions' > public/schema.json",
-		"start": "next start"
-	}
+  "name": "swc-project-website-workspace",
+  "packageManager": "pnpm@8.6.3",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run-turbo": "turbo",
+    "prepare": "husky install",
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "start": "turbo run start",
+    "lint": "turbo run lint",
+    "test": "turbo run test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "8.23.0",
+    "eslint-plugin-simple-import-sort": "^9.0.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "prettier-plugin-tailwindcss": "^0.1.13",
+    "turbo": "^2.0.14"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "**/*": "prettier --write --ignore-unknown"
+  }
 }
