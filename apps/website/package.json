@@ -1,17 +1,17 @@
 {
 	"dependencies": {
 		"@reach/skip-nav": "0.18.0",
-		"chart.js": "4.4.5",
+		"chart.js": "4.4.6",
 		"focus-visible": "5.2.1",
 		"markdown-to-jsx": "7.5.0",
 		"next": "15.0.1",
-		"nextra": "3.1.2",
-		"nextra-theme-docs": "3.1.2",
+		"nextra": "3.1.3",
+		"nextra-theme-docs": "3.1.3",
 		"react-chartjs-2": "5.2.0"
 	},
 	"devDependencies": {
 		"@swc/types": "0.1.12",
-		"@types/node": "22.8.1",
+		"@types/node": "22.8.2",
 		"autoprefixer": "10.4.20",
 		"postcss": "8.4.47",
 		"typescript-json-schema": "0.65.1"
