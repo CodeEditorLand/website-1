@@ -11,7 +11,7 @@
 	},
 	"devDependencies": {
 		"@swc/types": "0.1.12",
-		"@types/node": "22.8.4",
+		"@types/node": "22.8.6",
 		"autoprefixer": "10.4.20",
 		"postcss": "8.4.47",
 		"typescript-json-schema": "0.65.1"
