@@ -1,8 +1,13 @@
 {
+	"name": "swc-project-website-workspace",
 	"description": "",
-	"devDependencies": {
-		"lint-staged": "15.2.10",
-		"turbo": "2.3.0"
+	"main": "index.js",
+	"scripts": {
+		"build": "turbo run build",
+		"dev": "turbo run dev",
+		"prepare": "husky install",
+		"run-turbo": "turbo",
+		"start": "turbo run start"
 	},
 	"lint-staged": {
 		"**/*": "prettier --write --ignore-unknown",
@@ -11,13 +16,8 @@
 			"prettier --write"
 		]
 	},
-	"main": "index.js",
-	"name": "swc-project-website-workspace",
-	"scripts": {
-		"build": "turbo run build",
-		"dev": "turbo run dev",
-		"prepare": "husky install",
-		"run-turbo": "turbo",
-		"start": "turbo run start"
+	"devDependencies": {
+		"lint-staged": "15.2.10",
+		"turbo": "2.3.0"
 	}
 }
