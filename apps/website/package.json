@@ -3,15 +3,15 @@
 		"@reach/skip-nav": "0.18.0",
 		"chart.js": "4.4.6",
 		"focus-visible": "5.2.1",
-		"markdown-to-jsx": "7.6.2",
+		"markdown-to-jsx": "7.7.0",
 		"next": "15.0.3",
-		"nextra": "3.2.3",
-		"nextra-theme-docs": "3.2.3",
+		"nextra": "3.2.4",
+		"nextra-theme-docs": "3.2.4",
 		"react-chartjs-2": "5.2.0"
 	},
 	"devDependencies": {
 		"@swc/types": "0.1.12",
-		"@types/node": "22.9.0",
+		"@types/node": "22.9.1",
 		"autoprefixer": "10.4.20",
 		"postcss": "8.4.49",
 		"typescript-json-schema": "0.65.1"
