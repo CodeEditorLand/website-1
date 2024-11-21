@@ -10,7 +10,7 @@
 		"react-chartjs-2": "5.2.0"
 	},
 	"devDependencies": {
-		"@swc/types": "0.1.12",
+		"@swc/types": "0.1.17",
 		"@types/node": "22.9.1",
 		"autoprefixer": "10.4.20",
 		"postcss": "8.4.49",
