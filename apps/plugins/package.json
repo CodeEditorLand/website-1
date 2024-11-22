@@ -56,7 +56,7 @@
 		"react-day-picker": "9.3.2",
 		"react-hook-form": "7.53.2",
 		"react-resizable-panels": "2.1.7",
-		"react-virtuoso": "4.12.0",
+		"react-virtuoso": "4.12.1",
 		"recharts": "2.13.3",
 		"semver": "7.6.3",
 		"sharp": "0.33.5",
