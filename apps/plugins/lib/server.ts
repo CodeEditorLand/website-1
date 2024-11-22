@@ -29,6 +29,7 @@ async function createContext(
 ): Promise<Context> {
     if (!params) {
         console.warn("No params provided to createContext");
+
         return {
             getAccessToken: () => undefined,
             user: null,
@@ -57,7 +58,9 @@ async function createContext(
     return {
         getAccessToken() {
             const h = headers();
+
             const auth = h.get("authorization");
+
             return auth ? auth.replace("Bearer ", "") : undefined;
         },
         user,
@@ -164,7 +167,9 @@ export const createCaller = async () => {
     const ctx: Context = {
         getAccessToken() {
             const h = headers();
+
             const auth = h.get("authorization");
+
             return auth ? auth.replace("Bearer ", "") : undefined;
         },
         user,
@@ -172,5 +177,6 @@ export const createCaller = async () => {
         responseHeaders: null,
         isAdmin: false,
     };
+
     return factory(ctx);
 };

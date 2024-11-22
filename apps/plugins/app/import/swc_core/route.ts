@@ -14,6 +14,7 @@ const BodySchema = z.object({
 
 export async function POST(req: NextRequest) {
     const api = await createCaller();
+
     const { coreVersions, pluginRunnerVersions } = BodySchema.parse(
         await req.json()
     );

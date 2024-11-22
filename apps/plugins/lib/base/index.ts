@@ -72,6 +72,7 @@ export const publicProcedure = t.procedure.use(async (opts) => {
     }
 
     const durationMs = Date.now() - start;
+
     const meta = { path: opts.path, type: opts.type, durationMs };
 
     if (process.env.NODE_ENV !== "test") {
@@ -96,6 +97,7 @@ export const middleware = t.middleware;
 
 const isAuthenticated = t.middleware(({ ctx, next }) => {
     if (!ctx.user) throw new TRPCError({ code: "UNAUTHORIZED" });
+
     return next({
         ctx: {
             ...ctx,
@@ -110,6 +112,7 @@ export const contextStore = new AsyncLocalStorage<Context>();
 
 function removeUndefinedRecursively<T = any>(data: T): NonNullable<T> | null {
     if (data === null || data === undefined) return null;
+
     if (typeof data !== "object") {
         return data;
     }
@@ -121,6 +124,7 @@ function removeUndefinedRecursively<T = any>(data: T): NonNullable<T> | null {
     if (data instanceof Date) return data;
 
     const obj: any = data;
+
     const newObj: any = {};
     Object.keys(data).forEach((key) => {
         if (obj[key] === undefined) return;
@@ -129,5 +133,6 @@ function removeUndefinedRecursively<T = any>(data: T): NonNullable<T> | null {
 
         newObj[key] = value;
     });
+
     return newObj;
 }

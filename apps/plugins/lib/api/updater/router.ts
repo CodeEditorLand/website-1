@@ -60,6 +60,7 @@ export const updaterRouter = router({
 
                     for (const version of pkg.versions) {
                         const swcCoreVersion = version.swcCoreVersion;
+
                         const compatRange = await api.compatRange.byCoreVersion(
                             {
                                 version: swcCoreVersion,
@@ -70,6 +71,7 @@ export const updaterRouter = router({
                             console.error(
                                 `Compat range not found for SWC core version ${swcCoreVersion}`
                             );
+
                             continue;
                         }
 
@@ -142,12 +144,14 @@ export const updaterRouter = router({
 
                     for (const version of pkg.versions) {
                         const swcCoreVersion = version.swcCoreVersion;
+
                         const compatRange = byVersion(swcCoreVersion);
 
                         if (!compatRange) {
                             console.error(
                                 `Compat range not found for SWC core version ${swcCoreVersion}`
                             );
+
                             continue;
                         }
 

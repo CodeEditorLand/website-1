@@ -32,14 +32,17 @@ export async function POST(req: NextRequest) {
             name: runtime,
         },
     });
+
     const api = await createCaller();
 
     for (const version of versions) {
         const compatRange = await api.compatRange.byCoreVersion({
             version: version.swcCoreVersion,
         });
+
         if (!compatRange) {
             console.log(`No compat range found for ${version.swcCoreVersion}`);
+
             continue;
         }
 
@@ -66,6 +69,7 @@ export async function POST(req: NextRequest) {
             console.error(
                 `Failed to create compat range for ${version.swcCoreVersion}: ${e}`
             );
+
             continue;
         }
     }

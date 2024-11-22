@@ -225,6 +225,7 @@ export const compatRangeRouter = router({
         }
 
         const previousMaxCoreVersion = await maxSwcCoreVersion();
+
         const previousMaxPluginRunnerVersion =
           await maxSwcPluginRunnerVersion();
 
@@ -256,6 +257,7 @@ export const compatRangeRouter = router({
             console.log(
               `Skipping swc_core@${corePkg.version} as it's less than previous max (${previousMaxCoreVersion})`
             );
+
             continue;
           }
 
@@ -263,6 +265,7 @@ export const compatRangeRouter = router({
 
           if (!compatRange) {
             console.error(`Compat range not found for ${corePkg.version}`);
+
             continue;
           }
 

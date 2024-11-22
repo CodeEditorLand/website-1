@@ -9,6 +9,7 @@ export async function getCurrentUser(): Promise<User | null> {
     if (!session?.user) return null;
 
     const uid = session.user?.id;
+
     if (!uid) {
         throw new Error("No user id found in session");
     }
