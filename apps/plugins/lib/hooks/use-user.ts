@@ -4,7 +4,7 @@ import { userContext } from "@/lib/auth/user-context";
 import { useContext } from "react";
 
 export function useUser() {
-    const context = useContext(userContext);
+	const context = useContext(userContext);
 
-    return context;
+	return context;
 }

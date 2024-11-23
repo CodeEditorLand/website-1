@@ -5,8 +5,8 @@ import Google from "next-auth/providers/google";
 import Passkey from "next-auth/providers/passkey";
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
-    adapter: PrismaAdapter(db),
-    providers: [Google, Passkey],
+	adapter: PrismaAdapter(db),
+	providers: [Google, Passkey],
 
-    experimental: { enableWebAuthn: true },
+	experimental: { enableWebAuthn: true },
 });
