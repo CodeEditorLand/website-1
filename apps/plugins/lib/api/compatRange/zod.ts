@@ -5,4 +5,5 @@ export const VersionRangeSchema = z.object({
 	minVersion: z.string(),
 	maxVersion: z.string(),
 });
+
 export type VersionRange = z.infer<typeof VersionRangeSchema>;

@@ -16,5 +16,7 @@ export const apiRouter = router({
 });
 
 export type ApiRouter = typeof apiRouter;
+
 export type ApiInput = inferRouterInputs<ApiRouter>;
+
 export type ApiOutput = inferRouterOutputs<ApiRouter>;
