@@ -11,6 +11,7 @@ export function defineAbilitiesFor({
 	teamMemberships,
 }: {
 	user: User | null;
+
 	teamMemberships: TeamMembership[] | null;
 }): Abilities {
 	const isAdmin = user?.role === UserRoleSchema.Values.ADMIN;
@@ -56,6 +57,7 @@ export function defineAbilitiesFor({
 		if (await isTeamOwner(teamId)) {
 			return;
 		}
+
 		if (await isTeamMember(teamId)) {
 			throw new TRPCError({
 				code: "FORBIDDEN",

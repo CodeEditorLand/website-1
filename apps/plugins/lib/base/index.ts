@@ -24,9 +24,13 @@ export type User = z.infer<typeof UserSchema>;
 
 export type Abilities = {
 	isAdmin: boolean;
+
 	isTeamMember: (teamId: string) => Promise<boolean>;
+
 	isTeamOwner: (teamId: string) => Promise<boolean>;
+
 	requireTeamMember: (teamId: string) => Promise<void>;
+
 	requireTeamOwner: (teamId: string) => Promise<void>;
 };
 
@@ -37,8 +41,11 @@ export type Context = {
 	getAccessToken(): string | undefined;
 
 	user: User | null;
+
 	abilities: Abilities;
+
 	responseHeaders: Headers | null;
+
 	isAdmin: boolean;
 };
 
@@ -126,6 +133,7 @@ function removeUndefinedRecursively<T = any>(data: T): NonNullable<T> | null {
 	const obj: any = data;
 
 	const newObj: any = {};
+
 	Object.keys(data).forEach((key) => {
 		if (obj[key] === undefined) return;
 

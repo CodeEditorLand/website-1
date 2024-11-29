@@ -133,6 +133,7 @@ export function defineAbilitiesFor({ user }: { user: User | null }): Abilities {
 		if (await isTeamOwner(teamId)) {
 			return;
 		}
+
 		if (await isTeamMember(teamId)) {
 			throw new TRPCError({
 				code: "FORBIDDEN",

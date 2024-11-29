@@ -105,12 +105,14 @@ export const compatRangeRouter = router({
 			if (!range) {
 				throw new Error("CompatRange not found");
 			}
+
 			const plugins = merge(
 				range.plugins.map((p) => ({
 					name: p.plugin.name,
 					version: p.version,
 				})),
 			);
+
 			const runtimes = merge(
 				range.runtimes.map((p) => ({
 					name: p.runtime.name,
@@ -186,6 +188,7 @@ export const compatRangeRouter = router({
 			}
 
 			console.warn("Fallback to full search");
+
 			const compatRanges = await db.compatRange.findMany({
 				select: {
 					id: true,
@@ -283,6 +286,7 @@ export const compatRangeRouter = router({
 						if (done.has(rv)) {
 							continue;
 						}
+
 						if (semver.lt(rv, previousMaxPluginRunnerVersion)) {
 							continue;
 						}
@@ -300,7 +304,9 @@ export const compatRangeRouter = router({
 									compatRangeId: compatRange.id,
 								},
 							});
+
 							console.log(`Imported swc_plugin_runner@${rv}`);
+
 							done.add(rv);
 						}
 					}
@@ -318,6 +324,7 @@ export const compatRangeRouter = router({
 							pluginRunnerReq: corePkg.pluginRunnerReq,
 						},
 					});
+
 					console.log(`Imported swc_core@${corePkg.version}`);
 				}
 			},
@@ -337,6 +344,7 @@ function merge(ranges: { name: string; version: string }[]): VersionRange[] {
 			merged[name].maxVersion,
 			version,
 		);
+
 		merged[name] = { name, minVersion: min, maxVersion: max };
 	}
 
@@ -351,6 +359,7 @@ function merge(ranges: { name: string; version: string }[]): VersionRange[] {
 function mergeVersion(min: string, max: string, newValue: string) {
 	const minVersion =
 		min !== "0.0.0" && semver.lt(min, newValue) ? min : newValue;
+
 	const maxVersion = semver.gt(max, newValue) ? max : newValue;
 
 	return { min: minVersion, max: maxVersion };

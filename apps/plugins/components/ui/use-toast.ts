@@ -10,8 +10,11 @@ const TOAST_REMOVE_DELAY = 1000000;
 
 type ToasterToast = ToastProps & {
 	id: string;
+
 	title?: React.ReactNode;
+
 	description?: React.ReactNode;
+
 	action?: ToastActionElement;
 };
 
@@ -35,18 +38,22 @@ type ActionType = typeof actionTypes;
 type Action =
 	| {
 			type: ActionType["ADD_TOAST"];
+
 			toast: ToasterToast;
 	  }
 	| {
 			type: ActionType["UPDATE_TOAST"];
+
 			toast: Partial<ToasterToast>;
 	  }
 	| {
 			type: ActionType["DISMISS_TOAST"];
+
 			toastId?: ToasterToast["id"];
 	  }
 	| {
 			type: ActionType["REMOVE_TOAST"];
+
 			toastId?: ToasterToast["id"];
 	  };
 
@@ -63,6 +70,7 @@ const addToRemoveQueue = (toastId: string) => {
 
 	const timeout = setTimeout(() => {
 		toastTimeouts.delete(toastId);
+
 		dispatch({
 			type: "REMOVE_TOAST",
 			toastId: toastId,
@@ -113,6 +121,7 @@ export const reducer = (state: State, action: Action): State => {
 				),
 			};
 		}
+
 		case "REMOVE_TOAST":
 			if (action.toastId === undefined) {
 				return {
@@ -120,6 +129,7 @@ export const reducer = (state: State, action: Action): State => {
 					toasts: [],
 				};
 			}
+
 			return {
 				...state,
 				toasts: state.toasts.filter((t) => t.id !== action.toastId),
@@ -133,6 +143,7 @@ let memoryState: State = { toasts: [] };
 
 function dispatch(action: Action) {
 	memoryState = reducer(memoryState, action);
+
 	listeners.forEach((listener) => {
 		listener(memoryState);
 	});
