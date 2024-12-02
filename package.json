@@ -16,7 +16,6 @@
 	"scripts": {
 		"build": "turbo run build",
 		"dev": "turbo run dev",
-		"prepare": "husky install",
 		"run-turbo": "turbo",
 		"start": "turbo run start"
 	}
