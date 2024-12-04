@@ -3,7 +3,7 @@
 		"@reach/skip-nav": "0.18.0",
 		"chart.js": "4.4.7",
 		"focus-visible": "5.2.1",
-		"markdown-to-jsx": "7.7.0",
+		"markdown-to-jsx": "7.7.1",
 		"next": "15.0.3",
 		"nextra": "3.2.4",
 		"nextra-theme-docs": "3.2.4",
