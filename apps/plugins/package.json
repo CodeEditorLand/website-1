@@ -80,7 +80,7 @@
 		"prisma": "6.0.1",
 		"toml": "3.0.0",
 		"tsconfig-replace-paths": "0.0.14",
-		"zod-prisma-types": "3.1.8",
+		"zod-prisma-types": "3.2.1",
 		"zx": "8.2.4"
 	},
 	"name": "swc-plugins",
