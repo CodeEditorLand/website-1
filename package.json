@@ -1,4 +1,5 @@
 {
+	"dependencies": {},
 	"description": "",
 	"devDependencies": {
 		"lint-staged": "15.2.10",
@@ -12,7 +13,7 @@
 		]
 	},
 	"main": "index.js",
-	"name": "swc-project-website-workspace",
+	"name": "@codeeditorland/project-website-workspace",
 	"scripts": {
 		"build": "turbo run build",
 		"dev": "turbo run dev",

@@ -83,7 +83,7 @@
 		"zod-prisma-types": "3.2.1",
 		"zx": "8.2.4"
 	},
-	"name": "swc-plugins",
+	"name": "@codeeditorland/plugins",
 	"scripts": {
 		"build:next": "next build",
 		"db:build": "prisma generate",
