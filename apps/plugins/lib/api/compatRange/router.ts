@@ -182,10 +182,11 @@ export const compatRangeRouter = router({
 					},
 				});
 
-				if (v) {
-					return v.compatRange;
-				}
-			}
+      for (const range of compatRanges) {
+        if (matchRange(range, version)) {
+          return range;
+        }
+      }
 
 			console.warn("Fallback to full search");
 
@@ -232,7 +233,13 @@ export const compatRangeRouter = router({
 					});
 				}
 
-				const previousMaxCoreVersion = await maxSwcCoreVersion();
+        function byVersion(swcCoreVersion: string) {
+          for (const range of compatRanges) {
+            if (matchRange(range, swcCoreVersion)) {
+              return range;
+            }
+          }
+        }
 
 				const previousMaxPluginRunnerVersion =
 					await maxSwcPluginRunnerVersion();
@@ -389,4 +396,22 @@ async function maxSwcPluginRunnerVersion() {
 			? max
 			: pluginRunner.version;
 	}, "0.0.0");
+}
+
+export function matchRange(
+  range: { from: string; to: string },
+  version: string
+): boolean {
+  if (!semver.gte(version, range.from)) {
+    return false;
+  }
+
+  try {
+    if (semver.satisfies(version, range.to)) {
+      return true;
+    } else {
+      return false;
+    }
+  } catch (ignored) {}
+  return semver.lte(version, range.to);
 }
