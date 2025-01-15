@@ -20,7 +20,7 @@
 		"@codeeditorland/types": "0.0.1",
 		"@types/node": "22.10.6",
 		"autoprefixer": "10.4.20",
-		"postcss": "8.5.0",
+		"postcss": "8.5.1",
 		"typescript-json-schema": "0.65.1"
 	}
 }
