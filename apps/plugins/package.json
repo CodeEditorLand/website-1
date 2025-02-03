@@ -90,6 +90,6 @@
 		"toml": "3.0.0",
 		"tsconfig-replace-paths": "0.0.14",
 		"zod-prisma-types": "3.2.1",
-		"zx": "8.3.1"
+		"zx": "8.3.2"
 	}
 }
